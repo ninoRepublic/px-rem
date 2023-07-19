@@ -1,6 +1,6 @@
 # px-rem README
 
-This is the README for your extension "px-rem". After writing up a brief description, we recommend including the following sections.
+"px-rem". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

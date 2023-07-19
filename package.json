@@ -2,7 +2,7 @@
   "name": "px-rem",
   "displayName": "px-rem",
   "description": "px to rem",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.79.0"
   },
@@ -19,7 +19,11 @@
       },
       {
         "command": "px-rem.formatPsCss",
-        "title": "🍑 format ps css"
+        "title": "🍑 format ps css div"
+      },
+      {
+        "command": "px-rem.formatPsCssImg",
+        "title": "🍑 format ps css img"
       }
     ],
     "menus": {
@@ -33,6 +37,11 @@
           "when": "editorHasSelection && (editorLangId == css || editorLangId == scss)", 
           "command": "px-rem.formatPsCss",
           "group": "navigation"
+        },
+        {
+          "when": "editorHasSelection && (editorLangId == css || editorLangId == scss)", 
+          "command": "px-rem.formatPsCssImg",
+          "group": "navigation"
         }
       ]
     }
@@ -40,7 +49,8 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "test": "node ./test/runTest.js",
+    "package": "npx vsce package"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
